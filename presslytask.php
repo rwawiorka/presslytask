@@ -79,7 +79,7 @@ class Presslytask extends Module
         $tab->class_name = 'AdminMyTab';
         $tab->name = array();
         foreach (Language::getLanguages() as $lang) {
-            $tab->name[$lang['id_lang']] = $this->l('My Tab', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
+            $tab->name[$lang['id_lang']] = $this->trans('My Tab', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
         }
         $tab->id_parent = (int)Tab::getIdFromClassName('SELL');
         $tab->module = '';
@@ -123,11 +123,11 @@ class Presslytask extends Module
         $tab->name = array();
         foreach (Language::getLanguages() as $lang) {
             if ($className === 'AdminMostExpensiveOrders') {
-                $tab->name[$lang['id_lang']] = $this->l('Most Expensive Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
+                $tab->name[$lang['id_lang']] = $this->trans('Most Expensive Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             } else if ($className === 'AdminWaitingOrders') {
-                $tab->name[$lang['id_lang']] = $this->l('Waiting For Payment Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
+                $tab->name[$lang['id_lang']] = $this->trans('Waiting For Payment Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             } else {
-                $tab->name[$lang['id_lang']] = $this->l('My Tab', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
+                $tab->name[$lang['id_lang']] = $this->trans('My Tab', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             }
         }
         $tab->id_parent = (int) Tab::getIdFromClassName('AdminMyTab');
