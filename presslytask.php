@@ -83,6 +83,7 @@ class Presslytask extends Module
         }
         $tab->id_parent = (int)Tab::getIdFromClassName('SELL');
         $tab->module = '';
+        $tab->icon = 'mood';
 
         return $tab->save();
     }
