@@ -122,10 +122,10 @@ class Presslytask extends Module
         $tab->class_name = $className;
         $tab->name = array();
         foreach (Language::getLanguages() as $lang) {
-            if($className === 'AdminMostExpensiveOrders') {
+            if ($className === 'AdminMostExpensiveOrders') {
                 $tab->name[$lang['id_lang']] = $this->l('Most Expensive Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             } else if ($className === 'AdminWaitingOrders') {
-                $tab->name[$lang['id_lang']] = $this->l('Waiting Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
+                $tab->name[$lang['id_lang']] = $this->l('Waiting For Payment Orders', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             } else {
                 $tab->name[$lang['id_lang']] = $this->l('My Tab', array(), 'Modules.PresslyTask.Admin', $lang['locale']);
             }
